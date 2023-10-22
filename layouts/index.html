@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {{ $styles := resources.Get "css/main.css" | postCSS }}
+
+  {{ if .Site.IsServer }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
+  {{ else }}
+  {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" />
+  {{ end }}
+</head>
+
+<body>
+    <h1 class="text-3xl font-bold text-blue underline text-teal-500">
+        Theme Masuk Angin dengan Tailwind
+      </h1>
+</body>
+
+</html>
