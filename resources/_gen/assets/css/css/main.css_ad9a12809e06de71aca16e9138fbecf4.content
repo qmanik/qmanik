@@ -485,6 +485,9 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.pt-10 {
+  padding-top: 2.5rem;
+}
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -492,6 +495,13 @@ video {
 .font-bold {
   font-weight: 700;
 }
-.underline {
-  text-decoration-line: underline;
+.italic {
+  font-style: italic;
+}
+.text-teal-500 {
+  --tw-text-opacity: 1;
+  color: rgb(20 184 166 / var(--tw-text-opacity));
+}
+.underline-offset-8 {
+  text-underline-offset: 8px;
 }
